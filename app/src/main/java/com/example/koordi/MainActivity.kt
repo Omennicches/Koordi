@@ -44,4 +44,19 @@ fun GreetingPreview() {
     KoordiTheme {
         Greeting("Android")
     }
+    fun startScreen() {
+        println("Willkommen in der Tennisschule App!")
+        println("1. Kind erstellen")
+        println("2. Gruppen anzeigen")
+        println("3. Warteliste anzeigen")
+        println("Bitte wählen Sie eine Option:")
+
+        when (readLine()) {
+            "1" -> kinderErstellenScreen()
+            "2" -> gruppenAnzeigen()
+            "3" -> wartelisteAnzeigen()
+            else -> println("Ungültige Eingabe. Bitte versuchen Sie es erneut.")
+        }
+    }
+
 }
